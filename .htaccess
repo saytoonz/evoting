@@ -1,0 +1,43 @@
+RewriteEngine On
+DirectoryIndex v_evote.php
+
+
+RewriteRule ^0$ connections/logout.php
+
+RewriteRule ^login$ v_evote.php 
+
+
+
+RewriteRule ^home$ v_student_home_src.php 
+RewriteRule ^vote-department$ v_student_home_department.php 
+
+
+
+#EC Staff Pannel
+RewriteRule ^generate-codes$ v_staff_generate_code.php  
+
+RewriteRule ^student-staff$ v_staff_student_entry.php
+
+RewriteRule ^password-staff$ v_staff_password.php 
+
+
+
+#Admin Pannel
+RewriteRule ^admin-cp$ v_admin_campus.php 
+
+RewriteRule ^password$ v_admin_password.php 
+
+RewriteRule ^departments$ v_admin_departments.php 
+
+RewriteRule ^programs$ v_admin_programs.php
+
+RewriteRule ^student-type$ v_admin_student_type.php
+
+RewriteRule ^student-data$ v_admin_student_entry.php  
+
+RewriteRule ^staff$ v_admin_add_staff.php
+
+RewriteRule ^candidates-data$ v_admin_candidate_entry.php
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ v_view_studnent_table.php?say=$1
